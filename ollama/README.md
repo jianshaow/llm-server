@@ -5,15 +5,15 @@
 ### Build
 ~~~ shell
 export ollama_ver=0.1.32
-docker build -t jianshao/ollama-server:$ollama_ver-cpu .
-docker push jianshao/ollama-server:$ollama_ver-cpu
+docker build -t jianshao/ollama-server:$ollama_ver . --build-arg TAG=$ollama_ver
+docker push jianshao/ollama-server:$ollama_ver
 ~~~
 ### Test
 ~~~ shell
 # run a ollama server
 docker run --name ollama-server -it --rm -p 11434:11434 \
            -v $HOME/.ollama:/home/devel/.ollama \
-           jianshao/ollama-server:$ollama_ver-cpu
+           jianshao/ollama-server:$ollama_ver
 
 # run a codellama with cli
 docker exec -it ollama-server ollama run codellama
