@@ -4,7 +4,7 @@
 
 ### Build
 ~~~ shell
-export ollama_ver=0.1.31
+export ollama_ver=0.1.32
 docker build -t jianshao/ollama-server:$ollama_ver-cpu .
 docker push jianshao/ollama-server:$ollama_ver-cpu
 ~~~
