@@ -5,6 +5,7 @@ services:
     container_name: ${container_name_prefix}openai
     restart: unless-stopped
     environment:
+      - OLLAMA_MAX_LOADED_MODELS=${OLLAMA_MAX_LOADED_MODELS}
       - https_proxy=${https_proxy}
     volumes:
       - ${model_cache_path}:/home/devel/.ollama
