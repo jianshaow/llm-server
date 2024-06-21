@@ -4,7 +4,7 @@
 
 ### Build
 ~~~ shell
-export ollama_ver=0.1.42
+export ollama_ver=0.1.45
 docker build -t jianshao/ollama-server:$ollama_ver . --build-arg TAG=$ollama_ver
 docker push jianshao/ollama-server:$ollama_ver
 ~~~
