@@ -1,6 +1,6 @@
 version: "3"
 services:
-  openai:
+  ollama:
     image: jianshao/ollama-server:${image_ver}
     container_name: ${container_name_prefix}openai
     restart: unless-stopped
@@ -17,8 +17,8 @@ services:
     container_name: ${container_name_prefix}nextchat
     restart: unless-stopped
     depends_on:
-      - openai
+      - ollama
     environment:
-      - BASE_URL=http://openai:11434
+      - BASE_URL=http://ollama:11434
     ports:
       - 3000:3000
