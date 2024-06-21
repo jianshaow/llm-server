@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose exec openai ollama $*
+docker-compose exec ollama ollama $*
