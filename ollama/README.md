@@ -4,7 +4,7 @@
 
 ### Build
 ~~~ shell
-export ollama_ver=0.3.8
+export ollama_ver=0.3.10
 ./build-image.sh
 ~~~
 ### Test
