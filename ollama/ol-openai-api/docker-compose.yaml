@@ -9,7 +9,7 @@ services:
     ports:
       - 11434:11434
   nextchat:
-    image: yidadaa/chatgpt-next-web:v2.14.2
+    image: yidadaa/chatgpt-next-web:v2.15.3
     container_name: ${container_name_prefix}nextchat
     restart: unless-stopped
     depends_on:
